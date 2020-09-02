@@ -6,6 +6,8 @@
 #
 . ${opBase}/lib/opPathLib.sh
 
+bisosBase="/bisos"
+
 #
 # MMA SPECIFICATIONS
 #  ../../sysConfigInput/profiles/shProfile-mma.general
@@ -16,6 +18,33 @@ typeset cygwin_mainDrive="/cygdrive/${mainDrive}"
 
 typeset nDrive="n"
 typeset cygwin_nDrive="/cygdrive/${nDrive}"
+
+function aProf_bsip_bisos {
+    # /bisos/core/bsip/bin
+    export PATH="${bisosBase}/core/bsip/bin:${PATH}"
+}
+
+function aProf_venvPy3Dev_bisos {
+    # /bisos/venv/py3/dev/bisos3/bin
+    export PATH="${bisosBase}/venv/py3/dev/bisos3/bin:${PATH}"
+}
+
+function aProf_venvPy3_bisos {
+    # /bisos/venv/py3/bisos3/bin
+    export PATH="${bisosBase}/venv/py3/bisos3/bin:${PATH}"
+}
+
+function aProf_venvPy2Dev_bisos {
+    # /bisos/venv/py2/dev/bisos3/bin
+    export PATH="${bisosBase}/venv/py2/dev/bisos3/bin:${PATH}"
+}
+
+function aProf_venvPy2_bisos {
+    # /bisos/venv/py2/bisos3/bin
+    export PATH="${bisosBase}/venv/py2/bisos3/bin:${PATH}"
+}
+
+
 
 function aProf_basePath_mma {
   case ${opRunOsType} in
@@ -54,6 +83,25 @@ function aProf_basePath_mma {
       ;;	
   esac
 }
+
+function aProf_ucbFeatures_mma {
+  # Should come last
+  case ${opRunOsType} in
+    'SunOS')
+      export PATH="${PATH}:/usr/ucb"
+      ;;
+    'Linux')
+      doNothing	     
+      ;;
+    'Windows_NT' | 'UWIN-NT' | CYGWIN_NT-*)
+      doNothing
+      ;;
+    *)
+      EH_problem "$0 not Suported on ${opRunOsType}"
+      ;;	
+  esac
+}
+
 
 function aProf_ucbFeatures_mma {
   # Should come last
