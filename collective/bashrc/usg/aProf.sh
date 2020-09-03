@@ -281,7 +281,7 @@ function aProf_mmaBase_mma {
 
 function aProf_curenv_site {
   case ${opRunClusterName} in
-    'office' |  'dmz' | 'subscriber' | 'intPub1' | 'pub2')
+    'office' |  'dmz' | 'subscriber' | 'genericCluster' | 'pub2')
       case ${opRunOsType} in
 	'SunOS' |  'Linux' | 'Windows_NT' | 'UWIN-NT' | CYGWIN_NT-*)
            export PATH="/usr/curenv/bin:${PATH}"
@@ -633,7 +633,7 @@ function aProf_printer_site {
 	   ;;
       esac
       ;;
-    'dmz' | 'subscriber' | 'intPub1' | 'pub2')
+    'dmz' | 'subscriber' | 'genericCluster' | 'pub2')
       export LPDEST=noPrinter 
       ;;
     *)
@@ -660,7 +660,7 @@ function aProf_printer_site {
 function aProf_tex_user {
   #print ${allClusters}
   case ${opRunClusterName} in
-    'office' |  'dmz' | 'subscriber' | 'intPub1' | 'pub2')
+    'office' |  'dmz' | 'subscriber' | 'genericCluster' | 'pub2')
       case ${opRunOsType} in
 	'SunOS' |  'Linux' | 'Windows_NT' | 'UWIN-NT' | CYGWIN_NT-*)
 	   doNothing					       
@@ -676,7 +676,7 @@ function aProf_tex_user {
 
 function aProf_osmt_user {
   case ${opRunClusterName} in
-    'office' |  'dmz' | 'subscriber' | 'intPub1' | 'pub2')
+    'office' |  'dmz' | 'subscriber' | 'genericCluster' | 'pub2')
       case ${opRunOsType} in
 	'SunOS' |  'Linux' | 'Windows_NT' | 'UWIN-NT' | CYGWIN_NT-*)
           #export OSMTROOT=~/osmt
@@ -694,7 +694,7 @@ function aProf_osmt_user {
 
 function aProf_printer_user {
   case ${opRunClusterName} in
-    'office' |  'dmz' | 'subscriber' | 'intPub1'  | 'pub2')
+    'office' |  'dmz' | 'subscriber' | 'genericCluster'  | 'pub2')
       case ${opRunOsType} in
 	'SunOS' |  'Linux' | 'Windows_NT' | 'UWIN-NT' | CYGWIN_NT-*)
            export LPDEST=lpr1 
