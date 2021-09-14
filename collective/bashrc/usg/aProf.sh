@@ -5,6 +5,7 @@
 # during the development phase.
 #
 . ${opBase}/lib/opPathLib.sh
+. ${opBase}/lib/ocp-general.sh
 
 bisosBase="/bisos"
 
@@ -19,30 +20,34 @@ typeset cygwin_mainDrive="/cygdrive/${mainDrive}"
 typeset nDrive="n"
 typeset cygwin_nDrive="/cygdrive/${nDrive}"
 
-function aProf_bsip_bisos {
-    # /bisos/core/bsip/bin
-    export PATH="${bisosBase}/core/bsip/bin:${PATH}"
+function aProf_path_bisos {
+  opBasePathSet
 }
 
-function aProf_venvPy3Dev_bisos {
-    # /bisos/venv/py3/dev/bisos3/bin
-    export PATH="${bisosBase}/venv/py3/dev/bisos3/bin:${PATH}"
-}
+# function aProf_bsip_bisos {
+#     # /bisos/core/bsip/bin
+#     export PATH="${bisosBase}/core/bsip/bin:${PATH}"
+# }
 
-function aProf_venvPy3_bisos {
-    # /bisos/venv/py3/bisos3/bin
-    export PATH="${bisosBase}/venv/py3/bisos3/bin:${PATH}"
-}
+# function aProf_venvPy3Dev_bisos {
+#     # /bisos/venv/py3/dev/bisos3/bin
+#     export PATH="${bisosBase}/venv/py3/dev/bisos3/bin:${PATH}"
+# }
 
-function aProf_venvPy2Dev_bisos {
-    # /bisos/venv/py2/dev/bisos3/bin
-    export PATH="${bisosBase}/venv/py2/dev/bisos3/bin:${PATH}"
-}
+# function aProf_venvPy3_bisos {
+#     # /bisos/venv/py3/bisos3/bin
+#     export PATH="${bisosBase}/venv/py3/bisos3/bin:${PATH}"
+# }
 
-function aProf_venvPy2_bisos {
-    # /bisos/venv/py2/bisos3/bin
-    export PATH="${bisosBase}/venv/py2/bisos3/bin:${PATH}"
-}
+# function aProf_venvPy2Dev_bisos {
+#     # /bisos/venv/py2/dev/bisos3/bin
+#     export PATH="${bisosBase}/venv/py2/dev/bisos3/bin:${PATH}"
+# }
+
+# function aProf_venvPy2_bisos {
+#     # /bisos/venv/py2/bisos3/bin
+#     export PATH="${bisosBase}/venv/py2/bisos3/bin:${PATH}"
+# }
 
 
 
