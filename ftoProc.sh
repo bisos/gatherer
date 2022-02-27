@@ -57,12 +57,12 @@ _CommentEnd_
 ####+BEGIN: bx:dblock:ploneProc:bash:nodesList :types ""
 # {{{ DBLOCK-nodesList
 nodesList="
-collective
-user
-site
-district
-nation
 projs
+site
+nation
+user
+collective
+district
 "
 # }}} DBLOCK-nodesList
 ####+END:
