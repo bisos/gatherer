@@ -182,7 +182,9 @@ function aProf_qmail_mma {
   case ${opRunOsType} in
     'SunOS' |  'Linux')
       # /var/qmail/man
+      # echo ZZZ QMAIL
       export MANPATH=$MANPATH:/var/qmail/man
+      export PATH=/var/qmail/bin:$PATH
       ;;
     'Windows_NT' | 'UWIN-NT' | CYGWIN_NT-*)
       doNothing
