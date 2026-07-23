@@ -5,6 +5,7 @@
 # during the development phase.
 #
 . ${opBase}/lib/opPathLib.sh
+. ${opBase}/lib/path_.sh
 . ${opBase}/lib/ocp-general.sh
 
 bisosBase="/bisos"
